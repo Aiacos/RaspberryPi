@@ -39,3 +39,6 @@ source /opt/ros/noetic/setup.bash
 roscd
 #roscore
 
+# cleanup
+cd
+sudo rm -r -f ros_catkin_ws
