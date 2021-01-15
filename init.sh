@@ -34,11 +34,11 @@ rosdep install -y --from-paths src --ignore-src --rosdistro noetic -r --os=debia
 # compile
 sudo src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -j1 -DPYTHON_EXECUTABLE=/usr/bin/python3
 
+# cleanup
+cd
+sudo rm -r -f ros_catkin_ws
+
 # test
 source /opt/ros/noetic/setup.bash
 roscd
 #roscore
-
-# cleanup
-cd
-sudo rm -r -f ros_catkin_ws
