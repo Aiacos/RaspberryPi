@@ -26,8 +26,14 @@ rosdep update
 
 mkdir ~/ros_catkin_ws
 cd ~/ros_catkin_ws
-rosinstall_generator ros_comm --rosdistro noetic --deps --wet-only --tar > noetic-ros_comm-wet.rosinstall
-wstool init src noetic-ros_comm-wet.rosinstall
+
+# ROS-Comm
+#rosinstall_generator ros_comm --rosdistro noetic --deps --wet-only --tar > noetic-ros_comm-wet.rosinstall
+#wstool init src noetic-ros_comm-wet.rosinstall
+
+# Desktop Install
+rosinstall_generator desktop --rosdistro noetic --deps --wet-only --tar > noetic-desktop-wet.rosinstall
+wstool init -j8 src noetic-desktop-wet.rosinstall
 
 rosdep install -y --from-paths src --ignore-src --rosdistro noetic -r --os=debian:buster
 
