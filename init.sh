@@ -32,12 +32,12 @@ cd ~/ros_catkin_ws
 #wstool init src noetic-ros_comm-wet.rosinstall
 
 # Desktop
-#rosinstall_generator desktop --rosdistro noetic --deps --wet-only --tar > noetic-desktop-wet.rosinstall
-#wstool init -j8 src noetic-desktop-wet.rosinstall
+rosinstall_generator desktop --rosdistro noetic --deps --wet-only --tar > noetic-desktop-wet.rosinstall
+wstool init -j8 src noetic-desktop-wet.rosinstall
 
 # Desktop-Full
-rosinstall_generator desktop-full --rosdistro noetic --deps --wet-only --tar > noetic-desktop-full-wet.rosinstall
-wstool init -j8 src noetic-desktop-full-wet.rosinstall
+#rosinstall_generator desktop-full --rosdistro noetic --deps --wet-only --tar > noetic-desktop-full-wet.rosinstall
+#wstool init -j8 src noetic-desktop-full-wet.rosinstall
 
 rosdep install -y --from-paths src --ignore-src --rosdistro noetic -r --os=debian:buster
 
