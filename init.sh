@@ -6,9 +6,10 @@ sudo apt autoremove -y
 curl https://download.argon40.com/argon1.sh | bash
 
 ## Install Software
+sudo apt install xrdp -y
+sudo apt install xscreensaver -y
 sudo apt install blender -y
 sudo apt install arduino -y
-sudo apt install xrdp -y
 
 ## Instal Qt5
 sudo apt install qtcreator qt5-default -y
