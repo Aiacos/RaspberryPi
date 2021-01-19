@@ -2,6 +2,8 @@
 sudo apt update && upgrade -y
 sudo apt autoremove -y
 
+## Desktop Settings
+sh desktop_settings.sh
 
 ## Argon One Util
 curl https://download.argon40.com/argon1.sh | bash
@@ -48,10 +50,6 @@ rosdep install -y --from-paths src --ignore-src --rosdistro noetic -r --os=debia
 
 # compile
 sudo src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -j1 -DPYTHON_EXECUTABLE=/usr/bin/python3
-
-# cleanup
-cd
-sudo rm -r -f ros_catkin_ws
 
 # test
 #source /opt/ros/noetic/setup.bash
