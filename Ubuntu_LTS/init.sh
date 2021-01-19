@@ -37,6 +37,27 @@ chmod +x ./libuvc_installation.sh
 ./libuvc_installation.sh
 sudo rm -r -f libuvc_installation.sh
 
+# ROS RealSense
+export REALSENSE_ROS_WS=$HOME/catkin_ws/
+sudo apt install ros-noetic-ddynamic-reconfigure
+git clone https://github.com/IntelRealSense/realsense-ros.git $REALSENSE_ROS_WS/src/realsense-ros
+cd $REALSENSE_ROS_WS
+catkin_make
+
+
 ## Environment setup
 #echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+#echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 #source ~/.bashrc
+
+
+## Test
+
+# test ROS
+#source /opt/ros/noetic/setup.bash
+#roscd
+#roscore
+
+# test RealSense
+#/opt/realsense/bin/realsense-viewer
+#roslaunch realsense2_camera rs_camera.launch
