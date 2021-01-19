@@ -2,9 +2,15 @@
 sudo apt update && upgrade -y
 sudo apt autoremove -y
 
+## Settings
+timedatectl set-timezone Europe/London
+sudo apt install htpdate -y
+
 ## Argon One Util
 curl https://download.argon40.com/argon1.sh | bash
 
+## Install GUI
+sudo apt install ubuntu-budgie-desktop -y
 
 ## Install Software
 sudo apt install xrdp -y
