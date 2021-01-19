@@ -39,7 +39,7 @@ sudo rm -r -f libuvc_installation.sh
 
 # ROS RealSense
 export REALSENSE_ROS_WS=$HOME/catkin_ws/
-sudo apt install ros-noetic-ddynamic-reconfigure
+sudo apt install ros-noetic-ddynamic-reconfigure -y
 git clone https://github.com/IntelRealSense/realsense-ros.git $REALSENSE_ROS_WS/src/realsense-ros
 cd $REALSENSE_ROS_WS
 catkin_make
