@@ -22,11 +22,14 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
 sudo apt update
 
-sudo apt install ros-noetic-desktop-full
+sudo apt install ros-noetic-desktop-full -y
 
 
 ## Install Intel RealSense
-
+wget https://github.com/IntelRealSense/librealsense/raw/master/scripts/libuvc_installation.sh
+chmod +x ./libuvc_installation.sh
+./libuvc_installation.sh
+sudo rm -r -f libuvc_installation.sh
 
 ## Environment setup
 #echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
