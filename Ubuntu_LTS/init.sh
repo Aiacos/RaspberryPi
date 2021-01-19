@@ -3,7 +3,7 @@ sudo apt update && upgrade -y
 sudo apt autoremove -y
 
 ## Settings
-timedatectl set-timezone Europe/London
+sudo timedatectl set-timezone Europe/London
 sudo apt install htpdate -y
 
 ## Argon One Util
