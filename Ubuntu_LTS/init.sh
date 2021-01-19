@@ -11,6 +11,7 @@ curl https://download.argon40.com/argon1.sh | bash
 
 ## Install GUI
 sudo apt install ubuntu-budgie-desktop -y
+sudo snap install ubuntu-budgie-welcome --classic
 
 ## Install Software
 sudo apt install xrdp -y
