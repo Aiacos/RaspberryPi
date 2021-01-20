@@ -71,6 +71,7 @@ catkin_make install
 cd
 sudo rm -r -f libuvc_installation.sh
 sudo rm -r -f librealsense_build
+sudo apt autoremove -y
 
 
 ## Environment setup
