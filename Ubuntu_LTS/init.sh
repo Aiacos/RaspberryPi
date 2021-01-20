@@ -10,6 +10,7 @@ curl https://download.argon40.com/argon1.sh | bash
 sh desktop_environment.sh
 
 ## Install Software
+sudo apt install openssh-server sshguard -y
 sudo apt install xrdp -y
 sudo apt install blender -y
 sudo apt install arduino -y
