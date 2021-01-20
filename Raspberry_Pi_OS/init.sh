@@ -51,14 +51,6 @@ rosdep install -y --from-paths src --ignore-src --rosdistro noetic -r --os=debia
 # compile
 sudo src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -j1 -DPYTHON_EXECUTABLE=/usr/bin/python3
 
-# test
-#source /opt/ros/noetic/setup.bash
-#roscd
-#roscore
-
-echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-
 
 ## Intel RealSense
 wget https://github.com/IntelRealSense/librealsense/raw/master/scripts/libuvc_installation.sh
@@ -94,8 +86,21 @@ cd ../..
 catkin_make clean
 catkin_make -DCATKIN_ENABLE_TESTING=False -DCMAKE_BUILD_TYPE=Release
 catkin_make install
+
+
+## Environment setup
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
-# test
+
+## Test
+
+# test ROS
+#source /opt/ros/noetic/setup.bash
+#roscd
+#roscore
+
+# test RealSense
+#/opt/realsense/bin/realsense-viewer
 #roslaunch realsense2_camera rs_camera.launch
