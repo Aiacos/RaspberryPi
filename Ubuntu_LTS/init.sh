@@ -17,6 +17,7 @@ sudo snap install ubuntu-budgie-welcome --classic
 sudo apt install xrdp -y
 sudo apt install blender -y
 sudo apt install arduino -y
+sudo apt install geany -y
 
 
 ## Install Qt5
