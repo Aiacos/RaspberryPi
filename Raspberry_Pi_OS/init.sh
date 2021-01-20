@@ -26,7 +26,8 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 sudo apt update
 
 # dependencies
-sudo apt-get install -y python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential cmake
+sudo apt-get install -y python-rosdep python-rosinstall-generator python-wstool python-rosinstall cmake
+sudo apt-get install -y python3-rosdep python3-rosinstall-generator python3-vcstool build-essential
 
 sudo rosdep init
 rosdep update
@@ -43,10 +44,10 @@ cd ~/ros_catkin_ws
 #wstool init -j8 src noetic-desktop-wet.rosinstall
 
 # Desktop_Full
-rosinstall_generator desktop_full --rosdistro noetic --deps --wet-only --tar > noetic-desktop_full-wet.rosinstall
+rosinstall_generator desktop_full --rosdistro noetic --deps --tar > noetic-desktop_full-wet.rosinstall
 wstool init -j8 src noetic-desktop_full-wet.rosinstall
 
-rosdep install -y --from-paths src --ignore-src --rosdistro noetic -r --os=debian:buster
+rosdep install -y --from-paths src --ignore-packages-from-source --rosdistro noetic -r --os=debian:buster
 
 # compile
 sudo src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic -j1 -DPYTHON_EXECUTABLE=/usr/bin/python3
