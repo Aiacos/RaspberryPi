@@ -6,8 +6,10 @@ sudo apt autoremove -y
 ## Argon One Util
 curl https://download.argon40.com/argon1.sh | bash
 
+
 ## Install GUI
 sh desktop_environment.sh
+
 
 ## Install Software
 sudo apt install openssh-server sshguard -y
