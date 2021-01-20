@@ -27,7 +27,7 @@ curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE
 sudo apt update -y
 
 # Dependencies for building packages
-sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential y
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential -y
 sudo apt install python3-rosdep -y
 
 sudo rosdep init
