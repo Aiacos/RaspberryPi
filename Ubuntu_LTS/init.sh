@@ -36,7 +36,6 @@ sudo apt install ros-noetic-desktop-full -y
 wget https://github.com/IntelRealSense/librealsense/raw/master/scripts/libuvc_installation.sh
 chmod +x ./libuvc_installation.sh
 ./libuvc_installation.sh
-sudo rm -r -f libuvc_installation.sh
 
 # Wait until Librealsense script completed message is displayed (may take some time)
 # Connect RealSense device
@@ -66,6 +65,12 @@ cd ../..
 catkin_make clean
 catkin_make -DCATKIN_ENABLE_TESTING=False -DCMAKE_BUILD_TYPE=Release
 catkin_make install
+
+
+## CleanUp
+cd
+sudo rm -r -f libuvc_installation.sh
+sudo rm -r -f librealsense_build
 
 
 ## Environment setup
