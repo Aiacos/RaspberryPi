@@ -7,8 +7,8 @@ sudo apt autoremove -y
 curl https://download.argon40.com/argon1.sh | bash
 
 
-## Install GUI
-sh desktop_environment.sh
+## Install GUY
+sh desktop_environment_budgie.sh
 
 
 ## Install Software
