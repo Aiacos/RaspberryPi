@@ -8,7 +8,7 @@ curl https://download.argon40.com/argon1.sh | bash
 
 
 ## Install GUY
-sh desktop_environment_budgie.sh
+#sh desktop_environment_budgie.sh
 
 
 ## Install Software
