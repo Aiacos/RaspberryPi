@@ -1,7 +1,7 @@
 ## Install Desktop
 git clone https://github.com/wimpysworld/desktopify.git
 cd desktopify
-sudo ./desktopify --de ubuntu-kylin
+sudo ./desktopify --de ubuntu-kylin --oem
 
 #Usage
 #  ./desktopify --de <desktop environment>
