@@ -29,13 +29,6 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
 sudo apt update -y
 
-# Dependencies for building packages
-sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential -y
-sudo apt install python3-rosdep -y
-
-sudo rosdep init
-rosdep update
-
 # ROS
 sudo apt install ros-noetic-desktop-full -y
 
@@ -86,6 +79,13 @@ sudo apt autoremove -y
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
+
+# Dependencies for building packages
+#sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential -y
+#sudo apt install python3-rosdep -y
+
+#sudo rosdep init
+#rosdep update
 
 
 ## Test
