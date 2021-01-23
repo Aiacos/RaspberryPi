@@ -1,4 +1,5 @@
 ## Update
+cd
 sudo apt update && upgrade -y
 sudo apt autoremove -y
 
@@ -7,8 +8,10 @@ sudo apt autoremove -y
 curl https://download.argon40.com/argon1.sh | bash
 
 
-## Install GUY
-#sh desktop_environment_budgie.sh
+## Install Gnome Tweak Tool
+sudo add-apt-repository universe
+sudo apt install gnome-tweak-tool -y
+sudo apt install gir1.2-gtop-2.0 gir1.2-nm-1.0 gir1.2-clutter-1.0 -y
 
 
 ## Install Software
@@ -21,6 +24,11 @@ sudo apt install geany -y
 
 ## Install Qt5
 sudo apt install qtcreator qt5-default -y
+
+## Install VSCODE
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/vscodium.gpg
+echo 'deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list
+sudo apt update && sudo apt install codium -y
 
 
 ## Install ROS
@@ -46,7 +54,7 @@ chmod +x ./libuvc_installation.sh
 # source ROS
 source /opt/ros/noetic/setup.bash
 
-mkdir -p ~/catkin_ws/src
+#mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src/
 mv * ~/catkin_ws/src/realsense/
 cd ~/catkin_ws/src/
