@@ -1,5 +1,5 @@
 ## Update
-cd
+cd $home
 sudo apt update && upgrade -y
 sudo apt autoremove -y
 
@@ -42,7 +42,7 @@ sudo apt install ros-noetic-desktop-full -y
 
 
 ## Install Intel RealSense
-cd
+cd $home
 wget https://github.com/IntelRealSense/librealsense/raw/master/scripts/libuvc_installation.sh
 chmod +x ./libuvc_installation.sh
 ./libuvc_installation.sh
@@ -52,33 +52,12 @@ chmod +x ./libuvc_installation.sh
 # Run 'rs-enumerate-devices' from the terminal to verify the installation
 
 # Installing ROS Package: realsense-ros
-# source ROS
-source /opt/ros/noetic/setup.bash
-
-#mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src/
-mv * ~/catkin_ws/src/realsense/
-cd ~/catkin_ws/src/
-git clone https://github.com/IntelRealSense/realsense-ros.git
-cd realsense-ros/
-git checkout 'git tag | sort -V | grep -P "^\d+\.\d+\.\d+" | tail -1'
-cd ..
-catkin_init_workspace
-cd ..
-
-cd src
-git clone https://github.com/pal-robotics/ddynamic_reconfigure.git
-cd ddynamic_reconfigure
-git checkout 'git tag | sort -V | grep -P "^\d+\.\d+\.\d+" | tail -1'
-cd ../..
-
-catkin_make clean
-catkin_make -DCATKIN_ENABLE_TESTING=False -DCMAKE_BUILD_TYPE=Release
-catkin_make install
+cd $home/RaspberryPi
+sh build/ros-realsense.sh
 
 
 ## CleanUp
-cd
+cd $home
 sudo rm -r -f libuvc_installation.sh
 sudo rm -r -f librealsense_build
 sudo apt autoremove -y
