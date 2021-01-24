@@ -42,6 +42,7 @@ sudo apt install ros-noetic-desktop-full -y
 
 
 ## Install Intel RealSense
+cd
 wget https://github.com/IntelRealSense/librealsense/raw/master/scripts/libuvc_installation.sh
 chmod +x ./libuvc_installation.sh
 ./libuvc_installation.sh
