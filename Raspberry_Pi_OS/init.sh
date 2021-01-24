@@ -58,6 +58,7 @@ sudo src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --
 
 
 ## Intel RealSense
+cd
 wget https://github.com/IntelRealSense/librealsense/raw/master/scripts/libuvc_installation.sh
 chmod +x ./libuvc_installation.sh
 ./libuvc_installation.sh
