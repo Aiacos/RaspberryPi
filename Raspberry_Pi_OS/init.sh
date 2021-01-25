@@ -68,8 +68,9 @@ chmod +x ./libuvc_installation.sh
 # Run 'rs-enumerate-devices' from the terminal to verify the installation
 
 # Installing ROS Package: realsense-ros
-cd $home/RaspberryPi
-sh build/ros-realsense.sh
+cd $home
+cd RaspberryPi/
+bash build/ros-realsense.sh
 
 
 ## CleanUp
