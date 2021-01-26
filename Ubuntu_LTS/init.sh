@@ -8,10 +8,8 @@ sudo apt autoremove -y
 curl https://download.argon40.com/argon1.sh | bash
 
 
-## Install Gnome Tweak Tool
-sudo add-apt-repository universe
-sudo apt install gnome-tweak-tool -y
-sudo apt install gir1.2-gtop-2.0 gir1.2-nm-1.0 gir1.2-clutter-1.0 -y
+## Install GUI Tools
+bash desktopify.sh
 
 
 ## Install Software
