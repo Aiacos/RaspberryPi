@@ -57,6 +57,16 @@ cd RaspberryPi/
 bash build/ros-realsense.sh
 
 
+## Install Arduino ROS Lib
+sudo apt-get install ros-noetic-rosserial-arduino -y
+sudo apt-get install ros-noetic-rosserial -y
+
+mkdir -p ~/sketchbook/libraries
+cd ~/sketchbook/libraries
+rm -rf ros_lib
+rosrun rosserial_arduino make_libraries.py ~/sketchbook/libraries
+
+
 ## CleanUp
 cd $home
 sudo rm -r -f libuvc_installation.sh
