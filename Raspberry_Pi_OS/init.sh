@@ -73,6 +73,11 @@ cd RaspberryPi/
 bash build/ros-realsense.sh
 
 
+## Install Arduino Lib
+cd $home
+cd RaspberryPi/
+bash build/ros-serial-arduino.sh
+
 ## CleanUp
 cd $home
 sudo rm -r -f libuvc_installation.sh
