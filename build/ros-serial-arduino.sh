@@ -10,4 +10,4 @@ catkin_make install
 mkdir -p ~/sketchbook/libraries
 cd ~/sketchbook/libraries
 rm -rf ros_lib
-cd
+rosrun rosserial_arduino make_libraries.py ~/sketchbook/libraries
