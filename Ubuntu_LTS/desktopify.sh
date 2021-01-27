@@ -1,7 +1,12 @@
+#!/bin/bash
+
 ## Install Desktop
 git clone https://github.com/wimpysworld/desktopify.git
 cd desktopify
 sudo ./desktopify --de ubuntu
+cd ..
+sudo rm -r -f desktopify
+cd $home
 
 #Usage
 #  ./desktopify --de <desktop environment>

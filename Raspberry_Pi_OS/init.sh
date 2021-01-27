@@ -1,6 +1,7 @@
 ## Update
 cd $home
-sudo apt update && upgrade -y
+sudo apt update
+sudo apt upgrade -y
 sudo apt autoremove -y
 
 
@@ -69,14 +70,12 @@ chmod +x ./libuvc_installation.sh
 
 # Installing ROS Package: realsense-ros
 cd $home
-cd RaspberryPi/
-bash build/ros-realsense.sh
+bash RaspberryPi/build/ros-realsense.sh
 
 
 ## Install Arduino Lib
 cd $home
-cd RaspberryPi/
-bash build/ros-serial-arduino.sh
+bash RaspberryPi/build/ros-serial-arduino.sh
 
 
 ## CleanUp
