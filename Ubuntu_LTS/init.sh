@@ -19,6 +19,7 @@ sudo apt install xrdp -y
 sudo apt install blender -y
 sudo apt install arduino -y
 sudo apt install geany -y
+sudo apt install gitg -y
 
 
 ## Install Qt5
