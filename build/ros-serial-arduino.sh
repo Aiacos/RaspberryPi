@@ -1,4 +1,7 @@
+#!/bin/bash
+
 ## Arduino ROS lib Build
+source /opt/ros/noetic/setup.bash
 
 cd ~/catkin_ws/src
 git clone https://github.com/ros-drivers/rosserial.git

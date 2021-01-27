@@ -1,6 +1,7 @@
 ## Update
 cd $home
-sudo apt update && upgrade -y
+sudo apt update -y
+sudo apt upgrade -y
 sudo apt autoremove -y
 
 
@@ -51,18 +52,15 @@ chmod +x ./libuvc_installation.sh
 
 # Installing ROS Package: realsense-ros
 cd $home
-cd RaspberryPi/
-bash build/ros-realsense.sh
+bash RaspberryPi/build/ros-realsense.sh
 
 
 ## Install Arduino ROS Lib
 sudo apt-get install ros-noetic-rosserial-arduino -y
 sudo apt-get install ros-noetic-rosserial -y
 
-mkdir -p ~/sketchbook/libraries
-cd ~/sketchbook/libraries
-rm -rf ros_lib
-rosrun rosserial_arduino make_libraries.py ~/sketchbook/libraries
+cd $home
+bash RaspberryPi/build/ros-serial-arduino.sh
 
 
 ## CleanUp
@@ -70,6 +68,7 @@ cd $home
 sudo rm -r -f libuvc_installation.sh
 sudo rm -r -f librealsense_build
 sudo apt autoremove -y
+sudo apt install gnome-software -y
 
 
 ## Environment setup
