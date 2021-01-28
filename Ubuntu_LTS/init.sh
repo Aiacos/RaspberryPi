@@ -41,6 +41,10 @@ sudo apt update -y
 sudo apt install ros-noetic-desktop-full -y
 
 
+## Install MoveIt
+sudo apt install ros-noetic-moveit -y
+
+
 ## Install Intel RealSense
 cd $home
 wget https://github.com/IntelRealSense/librealsense/raw/master/scripts/libuvc_installation.sh
