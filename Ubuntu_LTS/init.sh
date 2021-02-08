@@ -63,6 +63,7 @@ sudo apt-get install ros-$ROS_VER-rosserial -y
 
 ## Arduino IDE Setup
 cd $home
+source /opt/ros/noetic/setup.bash
 mkdir -p ~/sketchbook/libraries
 cd ~/sketchbook/libraries
 rm -rf ros_lib
