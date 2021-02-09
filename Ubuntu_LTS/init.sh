@@ -54,6 +54,8 @@ sudo apt install ros-$ROS_VER-moveit -y
 
 
 ## Install Intel RealSense
+cd $home
+bash RaspberryPi/build/ros-realsense.sh
 sudo apt install ros-$ROS_VER-realsense2-camera -y
 sudo apt install ros-$ROS_VER-realsense2-description -y
 
