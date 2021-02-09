@@ -76,6 +76,8 @@ rosrun rosserial_arduino make_libraries.py ~/sketchbook/libraries
 
 ## CleanUp
 cd $home
+sudo rm -r -f libuvc_installation.sh
+sudo rm -r -f librealsense_build
 sudo apt autoremove -y
 sudo apt install gnome-software -y
 
