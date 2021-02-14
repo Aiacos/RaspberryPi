@@ -46,7 +46,7 @@ sudo apt install ros-$ROS_VER-desktop-full -y
 
 
 ## Install PS3 Controller librarie
-sudo apt-get install ros-$ROS_VER-joystick-drivers -y
+sudo apt install ros-$ROS_VER-joystick-drivers -y
 
 
 ## Install MoveIt
@@ -67,7 +67,7 @@ sudo apt-get install ros-$ROS_VER-rosserial -y
 
 ## Arduino IDE Setup
 cd $home
-source /opt/ros/noetic/setup.bash
+source /opt/ros/$ROS_VER/setup.bash
 mkdir -p ~/sketchbook/libraries
 cd ~/sketchbook/libraries
 rm -rf ros_lib
