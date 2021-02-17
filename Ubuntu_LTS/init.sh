@@ -11,7 +11,7 @@ curl https://download.argon40.com/argon1.sh | bash
 
 ## Install GUI Tools
 #bash desktopify.sh
-apt-get -y install --no-install-recommends oem-config-slideshow-ubuntu
+#apt-get -y install --no-install-recommends oem-config-slideshow-ubuntu
 
 
 ## Install Software
