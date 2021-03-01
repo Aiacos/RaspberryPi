@@ -17,7 +17,7 @@ curl https://download.argon40.com/argon1.sh | bash
 ## Install Software
 sudo apt install openssh-server sshguard -y
 sudo apt install xrdp -y
-sudo apt install blender -y
+#sudo apt install blender -y
 sudo apt install arduino -y
 sudo apt install geany -y
 sudo apt install gitg -y
@@ -51,6 +51,8 @@ sudo apt install ros-$ROS_VER-joystick-drivers -y
 
 
 ## Install MoveIt
+sudo apt install ros-$ROS_VER-ros-control -y
+sudo apt install ros-$ROS_VER-ros-controllers -y
 sudo apt install ros-$ROS_VER-moveit -y
 
 
