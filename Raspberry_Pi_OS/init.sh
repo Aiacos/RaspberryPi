@@ -8,12 +8,17 @@ sudo apt autoremove -y
 ## Argon One Util
 curl https://download.argon40.com/argon1.sh | bash
 
+## Tp-Link AC600 
+sudo wget http://downloads.fars-robotics.net/wifi-drivers/install-wifi -O /usr/bin/install-wifi
+sudo chmod +x /usr/bin/install-wifi
+sudo install-wifi
 
 ## Install Software
 sudo apt install xrdp -y
 sudo apt install xscreensaver -y
 sudo apt install blender -y
 sudo apt install arduino -y
+wget -qO- https://get.speedify.com | sudo -E bash -
 
 
 ## Instal Qt5
