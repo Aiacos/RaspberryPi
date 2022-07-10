@@ -18,8 +18,14 @@ sudo apt install xrdp -y
 sudo apt install xscreensaver -y
 sudo apt install blender -y
 sudo apt install arduino -y
-wget -qO- https://get.speedify.com | sudo -E bash -
 sudo apt install network-manager -y
+
+# Speedify
+wget -qO- https://get.speedify.com | sudo -E bash -
+/usr/share/speedify/speedify_cli login uni.lorenzo.a@gmail.com CaccaSecca86
+/usr/share/speedify/speedify_cli startupconnect on
+
+mkdir -p ~/.config/autostart/ && cp /usr/share/speedifyui/speedifyui-autostart.desktop ~/.config/autostart/
 
 
 ## Instal Qt5
