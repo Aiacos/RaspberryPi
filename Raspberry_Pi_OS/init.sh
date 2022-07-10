@@ -19,6 +19,7 @@ sudo apt install xscreensaver -y
 sudo apt install blender -y
 sudo apt install arduino -y
 wget -qO- https://get.speedify.com | sudo -E bash -
+sudo apt install network-manager -y
 
 
 ## Instal Qt5
