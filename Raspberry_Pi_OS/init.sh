@@ -28,6 +28,10 @@ wget -qO- https://get.speedify.com | sudo -E bash -
 
 mkdir -p ~/.config/autostart/ && cp /usr/share/speedifyui/speedifyui-autostart.desktop ~/.config/autostart/
 
+# Parsec
+wget https://s3.amazonaws.com/parsec-build/package/parsec-rpi.deb
+sudo dpkg -i parsec-rpi.deb
+
 
 ## Instal Qt5
 sudo apt install qtcreator qt5-default -y
