@@ -19,6 +19,7 @@ sudo apt install xscreensaver -y
 sudo apt install blender -y
 sudo apt install arduino -y
 sudo apt install network-manager -y
+sudo apt install usbmuxd -y
 
 # Speedify
 wget -qO- https://get.speedify.com | sudo -E bash -
