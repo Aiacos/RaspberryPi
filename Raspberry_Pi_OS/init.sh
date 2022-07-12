@@ -1,6 +1,6 @@
 ## Update
 cd $home
-sudo apt update
+sudo apt update -y
 sudo apt upgrade -y
 sudo apt autoremove -y
 
