@@ -13,9 +13,12 @@ sudo wget http://downloads.fars-robotics.net/wifi-drivers/install-wifi -O /usr/b
 sudo chmod +x /usr/bin/install-wifi
 sudo install-wifi
 
-sudo apt install git dkms
+sudo apt install git -y
+sudo apt install dkms -y
 git clone https://github.com/aircrack-ng/rtl8812au.git
 cd rtl8812au
+sed -i 's/CONFIG_PLATFORM_I386_PC = y/CONFIG_PLATFORM_I386_PC = n/g' Makefile
+sed -i 's/CONFIG_PLATFORM_ARM64_RPI = n/CONFIG_PLATFORM_ARM64_RPI = y/g' Makefile
 sudo make dkms_install
 
 ## Install Software
