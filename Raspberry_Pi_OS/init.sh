@@ -13,6 +13,11 @@ sudo wget http://downloads.fars-robotics.net/wifi-drivers/install-wifi -O /usr/b
 sudo chmod +x /usr/bin/install-wifi
 sudo install-wifi
 
+sudo apt install git dkms
+git clone https://github.com/aircrack-ng/rtl8812au.git
+cd rtl8812au
+sudo make dkms_install
+
 ## Install Software
 sudo apt install xrdp -y
 sudo apt install xscreensaver -y
