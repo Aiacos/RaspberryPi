@@ -36,13 +36,19 @@ wget -qO- https://get.speedify.com | sudo -E bash -
 
 mkdir -p ~/.config/autostart/ && cp /usr/share/speedifyui/speedifyui-autostart.desktop ~/.config/autostart/
 
+sed -i 's/ENABLE_SHARE=0/ENABLE_SHARE=1/g' /etc/speedify/speedify.conf
+sed -i 's/SHARE_INTERFACE=""/SHARE_INTERFACE="wlan0"/g' /etc/speedify/speedify.conf
+sed -i 's/#WIFI_INTERFACE=""/WIFI_INTERFACE="wlan0"/g' /etc/speedify/speedify.conf
+sed -i 's/#WIFI_PASSWORD=""/WIFI_PASSWORD="CaccaSecca86"/g' /etc/speedify/speedify.conf
+sed -i 's/#WIFI_MODE="2.5"/WIFI_MODE="5"/g' /etc/speedify/speedify.conf
+
 # Parsec
 wget https://s3.amazonaws.com/parsec-build/package/parsec-rpi.deb
 sudo dpkg -i parsec-rpi.deb
 
 
 ## Instal Qt5
-sudo apt install qtcreator qt5-default -y
+sudo apt install qtcreator qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools -y
 
 ## Install VSCODE
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/vscodium.gpg
