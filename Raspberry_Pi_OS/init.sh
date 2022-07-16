@@ -42,6 +42,7 @@ mkdir -p ~/.config/autostart/ && cp /usr/share/speedifyui/speedifyui-autostart.d
 sudo sed -i 's/ENABLE_SHARE=0/ENABLE_SHARE=1/g' /etc/speedify/speedify.conf
 sudo sed -i 's/SHARE_INTERFACE=""/SHARE_INTERFACE="wlan1"/g' /etc/speedify/speedify.conf
 sudo sed -i 's/#WIFI_INTERFACE="wlan0"/WIFI_INTERFACE="wlan1"/g' /etc/speedify/speedify.conf
+sudo sed -i 's/#WIFI_SSID="SpeedefyAP"/WIFI_SSID="SpeedefyAP"/g' /etc/speedify/speedify.conf
 sudo sed -i 's/#WIFI_PASSWORD="password"/WIFI_PASSWORD="CaccaSecca86"/g' /etc/speedify/speedify.conf
 sudo sed -i 's/#WIFI_MODE="2.4"/WIFI_MODE="5"/g' /etc/speedify/speedify.conf
 
