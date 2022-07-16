@@ -30,6 +30,7 @@ sudo apt install xscreensaver -y
 sudo apt install blender -y
 sudo apt install arduino -y
 sudo apt install network-manager -y
+sudo apt install network-manager-gnome -y
 sudo apt install usbmuxd -y
 
 # Speedify
