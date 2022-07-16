@@ -39,11 +39,11 @@ wget -qO- https://get.speedify.com | sudo -E bash -
 
 mkdir -p ~/.config/autostart/ && cp /usr/share/speedifyui/speedifyui-autostart.desktop ~/.config/autostart/
 
-sed -i 's/ENABLE_SHARE=0/ENABLE_SHARE=1/g' /etc/speedify/speedify.conf
-sed -i 's/SHARE_INTERFACE=""/SHARE_INTERFACE="wlan1"/g' /etc/speedify/speedify.conf
-sed -i 's/#WIFI_INTERFACE=""/WIFI_INTERFACE="wlan1"/g' /etc/speedify/speedify.conf
-sed -i 's/#WIFI_PASSWORD=""/WIFI_PASSWORD="CaccaSecca86"/g' /etc/speedify/speedify.conf
-sed -i 's/#WIFI_MODE="2.5"/WIFI_MODE="5"/g' /etc/speedify/speedify.conf
+sudo sed -i 's/ENABLE_SHARE=0/ENABLE_SHARE=1/g' /etc/speedify/speedify.conf
+sudo sed -i 's/SHARE_INTERFACE=""/SHARE_INTERFACE="wlan1"/g' /etc/speedify/speedify.conf
+sudo sed -i 's/#WIFI_INTERFACE=""/WIFI_INTERFACE="wlan1"/g' /etc/speedify/speedify.conf
+sudo sed -i 's/#WIFI_PASSWORD=""/WIFI_PASSWORD="CaccaSecca86"/g' /etc/speedify/speedify.conf
+sudo sed -i 's/#WIFI_MODE="2.5"/WIFI_MODE="5"/g' /etc/speedify/speedify.conf
 
 # Parsec
 wget https://s3.amazonaws.com/parsec-build/package/parsec-rpi.deb
