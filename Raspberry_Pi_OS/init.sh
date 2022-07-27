@@ -47,17 +47,9 @@ sudo sed -i 's/#WIFI_SSID="SpeedefyAP"/WIFI_SSID="SpeedefyAP"/g' /etc/speedify/s
 sudo sed -i 's/#WIFI_PASSWORD="password"/WIFI_PASSWORD="CaccaSecca86"/g' /etc/speedify/speedify.conf
 sudo sed -i 's/#WIFI_MODE="2.4"/WIFI_MODE="5"/g' /etc/speedify/speedify.conf
 
-sudo mv /etc/wpa_supplicant /etc/wpa_supplicant_OLD
-
 # Parsec
 wget https://s3.amazonaws.com/parsec-build/package/parsec-rpi.deb
 sudo dpkg -i parsec-rpi.deb
 
 
-## Instal Qt5
-sudo apt install qtcreator qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools -y
-
-## Install VSCODE
-wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/vscodium.gpg
-echo 'deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list
-sudo apt update && sudo apt install codium -y
+sudo mv /etc/wpa_supplicant /etc/wpa_supplicant_OLD
