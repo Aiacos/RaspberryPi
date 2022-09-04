@@ -18,6 +18,7 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 sudo apt install git -y
 sudo apt install dkms -y
+sudo systemctl enable --now xrdp
 git clone https://github.com/aircrack-ng/rtl8812au.git
 cd rtl8812au
 sed -i 's/CONFIG_PLATFORM_I386_PC = y/CONFIG_PLATFORM_I386_PC = n/g' Makefile
@@ -48,8 +49,8 @@ sudo sed -i 's/#WIFI_PASSWORD="password"/WIFI_PASSWORD="CaccaSecca86"/g' /etc/sp
 sudo sed -i 's/#WIFI_MODE="2.4"/WIFI_MODE="5"/g' /etc/speedify/speedify.conf
 
 # Parsec
-wget https://s3.amazonaws.com/parsec-build/package/parsec-rpi.deb
-sudo dpkg -i parsec-rpi.deb
+#wget https://s3.amazonaws.com/parsec-build/package/parsec-rpi.deb
+#sudo dpkg -i parsec-rpi.deb
 
 
 sudo mv /etc/wpa_supplicant /etc/wpa_supplicant_OLD
