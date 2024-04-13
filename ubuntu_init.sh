@@ -6,14 +6,14 @@ sudo apt autoremove -y
 
 
 ## Argon One Util
-curl https://download.argon40.com/argon1.sh | bash
+#curl https://download.argon40.com/argon1.sh | bash
 
 # Dev Tools
 sudo apt install net-tools -y
 sudo apt install python3 python3-pip pipx -y
 
 # Configure SSH
-sudo apt install openssh-server -y
+sudo apt install openssh-server sshguard -y
 
 # Install Apps
 sudo apt install neofetch -y
