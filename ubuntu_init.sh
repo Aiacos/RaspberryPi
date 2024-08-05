@@ -35,8 +35,6 @@ sudo apt install cmatrix -y
 sudo apt install tmux -y
 sudo apt install gnome-tweaks -y
 sudo apt install gnome-shell-extension-manager -y
-bash <(curl -L zellij.dev/launch)
-
 
 # CasaOS
 curl -fsSL https://get.casaos.io | sudo bash
@@ -48,6 +46,7 @@ sudo usermod -aG docker $USER
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/aiacos/.zshrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+brew install zellij
 brew install jesseduffield/lazygit/lazygit
 brew install jesseduffield/lazydocker/lazydocker
 
