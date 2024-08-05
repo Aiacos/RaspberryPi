@@ -35,6 +35,7 @@ sudo apt install cmatrix -y
 sudo apt install tmux -y
 sudo apt install gnome-tweaks -y
 sudo apt install gnome-shell-extension-manager -y
+bash <(curl -L zellij.dev/launch)
 
 
 # CasaOS
