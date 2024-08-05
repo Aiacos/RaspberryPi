@@ -4,16 +4,27 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt autoremove -y
 
+# Dev Tools
+sudo apt install net-tools -y
+sudo apt install python3 python3-pip pipx python3-setuptools git -y
+
+## Pironman5
+cd ~
+git clone https://github.com/sunfounder/pironman5.git
+cd ~/pironman5
+sudo python3 install.py
+cd ~
 
 ## Argon One Util
 #curl https://download.argon40.com/argon1.sh | bash
 
-# Dev Tools
-sudo apt install net-tools -y
-sudo apt install python3 python3-pip pipx -y
-
 # Configure SSH
 sudo apt install openssh-server sshguard -y
+
+# RaspberryPy Repo
+echo deb http://archive.raspberrypi.org/debian/ bullseye main | sudo tee /etc/apt/sources.list.d/raspberrypi.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 7FA3303E
+sudo apt update
 
 # Install Apps
 sudo apt install neofetch -y
