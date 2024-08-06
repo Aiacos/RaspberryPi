@@ -124,6 +124,38 @@ sed -i "s/zstyle ':prezto:module:prompt' theme 'sorin'/zstyle ':prezto:module:pr
 # Configure p10k
 #p10k configure # Should start on new shell
 
+tee -a ~/.zellij_base_layout.kdl << EOF
+layout {
+        default_tab_template {
+                pane size=1 borderless=true {
+                plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+                plugin location="zellij:status-bar"
+        }
+    }   
+        tab name="Work" split_direction="Vertical" {
+        pane split_direction="Vertical" {
+            pane name="Btop" command="btop" {
+
+            }
+            pane split_direction="Horizontal" {
+                pane name="System" command="neofetch" {
+
+                }
+                pane focus=true name="Shell" {
+
+                }
+            }
+        }
+    }
+}
+session_name "Base"
+attach_to_session true
+
+EOF
+
 ## Grub
 cd 
 cd .settings
