@@ -102,27 +102,11 @@ wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/do
 && fc-cache -fv
 cd
 
-# Install Prezto
-zsh
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
-# Create Prezto Configuration
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  sudo ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-
-# Set zsh as default shell
+# Configure ZSH
+sudo apt install git wget curl ruby zsh -y
 chsh -s $(which zsh)
-
-# Add plugin anth theme
-#sed -i "/'completion' \\\/i \ \ \'git\' \\\ " .zpreztorc
-sed -i "/'history-substring-search' \\\/i \ \ \'syntax-highlighting\' \\\ " .zpreztorc
-sed -i "/'history-substring-search' \\\/a \ \ \'autosuggestions\' \\\ " .zpreztorc
-sed -i "s/zstyle ':prezto:module:prompt' theme 'sorin'/zstyle ':prezto:module:prompt' theme 'powerlevel10k'/" .zpreztorc
-
-# Configure p10k
-#p10k configure # Should start on new shell
+curl -fsSL https://raw.githubusercontent.com/JGroxz/presto-prezto/main/presto-prezto.sh | bash -s -- --font
+p10k configure
 
 tee -a ~/.zellij_base_layout.kdl << EOF
 layout {
