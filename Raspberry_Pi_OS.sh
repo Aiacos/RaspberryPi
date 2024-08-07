@@ -1,0 +1,112 @@
+## Update
+cd $home
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt autoremove -y
+
+# Dev Tools
+sudo apt install net-tools -y
+sudo apt install python3 python3-pip pipx python3-setuptools git -y
+
+## Pironman5
+cd ~
+git clone https://github.com/sunfounder/pironman5.git
+cd ~/pironman5
+sudo python3 install.py
+cd ~
+
+## Argon One Util
+#curl https://download.argon40.com/argon1.sh | bash
+
+# Configure SSH
+sudo apt install openssh-server sshguard -y
+
+# Install Apps
+sudo apt install neofetch -y
+sudo apt install btop -y
+sudo apt install gedit -y
+sudo apt install geany -y
+sudo apt install cmatrix -y
+sudo apt install tmux -y
+sudo apt install neovim -y
+
+## Install Zellij from Cargo
+# Cargo
+curl https://sh.rustup.rs -sSf | sh
+
+# Zellij
+cargo install --locked zellij
+
+
+# Speedtest
+sudo apt-get install curl
+curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+sudo apt-get install speedtest
+
+# CasaOS
+curl -fsSL https://get.casaos.io | sudo bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+## Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/aiacos/.zshrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+brew install zellij
+brew install jesseduffield/lazygit/lazygit
+brew install jesseduffield/lazydocker/lazydocker
+
+# Dracula theme
+sudo apt-get install dconf-cli -y
+cd
+mkdir .settings
+cd .settings
+
+# Dracula Gnome Terminal
+git clone https://github.com/dracula/gnome-terminal
+cd gnome-terminal
+./install.sh
+
+# Dracula Wallpaper
+cd ..
+git clone https://github.com/dracula/wallpaper.git
+
+## Configure ZSH with Prezto
+# Configure ZSH
+sudo apt install git wget curl ruby zsh -y
+chsh -s $(which zsh)
+curl -fsSL https://raw.githubusercontent.com/JGroxz/presto-prezto/main/presto-prezto.sh | bash -s -- --font
+p10k configure
+
+tee -a ~/.zellij_base_layout.kdl << EOF
+layout {
+        default_tab_template {
+                pane size=1 borderless=true {
+                plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+                plugin location="zellij:status-bar"
+        }
+    }   
+        tab name="Work" split_direction="Vertical" {
+        pane split_direction="Vertical" {
+            pane name="Btop" command="btop" {
+
+            }
+            pane split_direction="Horizontal" {
+                pane name="System" command="neofetch" {
+
+                }
+                pane focus=true name="Shell" {
+
+                }
+            }
+        }
+    }
+}
+session_name "Base"
+attach_to_session true
+
+EOF
