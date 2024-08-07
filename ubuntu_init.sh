@@ -36,6 +36,11 @@ sudo apt install tmux -y
 sudo apt install gnome-tweaks -y
 sudo apt install gnome-shell-extension-manager -y
 
+# Speedtest
+sudo apt-get install curl
+curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+sudo apt-get install speedtest
+
 # CasaOS
 curl -fsSL https://get.casaos.io | sudo bash
 sudo groupadd docker
