@@ -37,7 +37,6 @@ curl https://sh.rustup.rs -sSf | sh
 # Zellij
 cargo install --locked zellij
 
-
 # Speedtest
 sudo apt-get install curl
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
@@ -56,6 +55,32 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install zellij
 brew install jesseduffield/lazygit/lazygit
 brew install jesseduffield/lazydocker/lazydocker
+
+## Neovim setup
+sudo snap install --classic nvim 
+echo 'alias nvim="/snap/bin/nvim"' >> ~/.zshrc
+source ~/.zshrc
+
+# Dependencies
+sudo apt install npm nodejs cargo ripgrep clang clangd -y  
+sudo apt install pipx python3-full python3-pynvim python3-ply -y  
+cargo install tree-sitter-cli
+brew install bottom
+
+# Go disk usage
+curl -L https://github.com/dundee/gdu/releases/latest/download/gdu_linux_amd64.tgz | tar xz
+sudo chmod +x gdu_linux_amd64
+sudo mv gdu_linux_amd64 /usr/bin/gdu
+
+# Nerd Fonts
+curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash  
+
+# Astrovim
+#git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
+
+# Astrovim Custom
+git clone https://github.com/kabinspace/AstroNvim_user ~/.config/nvim
+nvim --headless +q
 
 # Dracula theme
 sudo apt-get install dconf-cli -y
