@@ -62,7 +62,7 @@ echo 'alias nvim="/snap/bin/nvim"' >> ~/.zshrc
 source ~/.zshrc
 
 # Dependencies
-sudo apt install npm nodejs cargo ripgrep clang clangd -y  
+sudo apt install npm nodejs cargo ripgrep fd-find clang clangd -y  
 sudo apt install pipx python3-full python3-pynvim python3-ply -y  
 cargo install tree-sitter-cli
 brew install bottom
