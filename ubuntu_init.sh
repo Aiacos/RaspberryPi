@@ -50,10 +50,14 @@ sudo usermod -aG docker $USER
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/aiacos/.zshrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+echo 'export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"' >> ~/.zshrc
 
 brew install zellij
 brew install jesseduffield/lazygit/lazygit
 brew install jesseduffield/lazydocker/lazydocker
+brew install zsh-history-substring-search
+brew install atuin
+brew install dust
 
 ## Neovim setup
 sudo apt install neovim -y
