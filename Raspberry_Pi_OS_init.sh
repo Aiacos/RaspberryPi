@@ -28,6 +28,9 @@ sudo apt install gedit -y
 sudo apt install geany -y
 sudo apt install cmatrix -y
 sudo apt install tmux -y
+sudo apt install ranger -y
+sudo apt install sxiv -y
+sudo apt install chafa -y
 sudo apt install neovim -y
 
 ## Install Zellij from Cargo
