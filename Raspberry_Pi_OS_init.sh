@@ -33,6 +33,9 @@ sudo apt install sxiv -y
 sudo apt install chafa -y
 sudo apt install neovim -y
 
+touch ~/.config/ranger/rc.conf
+echo "set preview_images true" >> ~/.config/ranger/rc.conf
+
 ## Install Zellij from Cargo
 # Cargo
 curl https://sh.rustup.rs -sSf | sh
