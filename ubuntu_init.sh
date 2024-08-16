@@ -65,6 +65,7 @@ brew install jesseduffield/lazydocker/lazydocker
 brew install zsh-history-substring-search
 brew install atuin
 brew install dust
+brew install jstkdng/programs/ueberzugpp
 
 ## Neovim setup
 sudo apt install neovim -y
