@@ -39,6 +39,9 @@ sudo apt install chafa -y
 sudo apt install gnome-tweaks -y
 sudo apt install gnome-shell-extension-manager -y
 
+touch ~/.config/ranger/rc.conf
+echo "set preview_images true" >> ~/.config/ranger/rc.conf
+
 # Speedtest
 sudo apt-get install curl
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
