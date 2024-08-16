@@ -51,17 +51,17 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 
 ## Brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/aiacos/.zshrc
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-echo 'export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"' >> ~/.zshrc
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/aiacos/.zshrc
+#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#echo 'export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"' >> ~/.zshrc
 
-brew install zellij
-brew install jesseduffield/lazygit/lazygit
-brew install jesseduffield/lazydocker/lazydocker
-brew install zsh-history-substring-search
-brew install atuin
-brew install dust
+#brew install zellij
+#brew install jesseduffield/lazygit/lazygit
+#brew install jesseduffield/lazydocker/lazydocker
+#brew install zsh-history-substring-search
+#brew install atuin
+#brew install dust
 
 ## Neovim setup
 sudo snap install --classic nvim 
@@ -82,11 +82,9 @@ sudo mv gdu_linux_amd64 /usr/bin/gdu
 # Nerd Fonts
 curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash  
 
-# Astrovim
-#git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
-
-# Astrovim Custom
-git clone https://github.com/kabinspace/AstroNvim_user ~/.config/nvim
+# LazyVim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 nvim --headless +q
 
 # Dracula theme
@@ -108,8 +106,7 @@ git clone https://github.com/dracula/wallpaper.git
 # Configure ZSH
 sudo apt install git wget curl ruby zsh -y
 chsh -s $(which zsh)
-curl -fsSL https://raw.githubusercontent.com/JGroxz/presto-prezto/main/presto-prezto.sh | bash -s -- --font
-p10k configure
+curl -fsSL https://raw.githubusercontent.com/Aiacos/presto-prezto/main/presto-prezto.sh | bash -s -- --font
 
 tee -a ~/.zellij_base_layout.kdl << EOF
 layout {
