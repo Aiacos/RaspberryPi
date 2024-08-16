@@ -35,6 +35,7 @@ sudo apt install neovim -y
 
 touch ~/.config/ranger/rc.conf
 echo "set preview_images true" >> ~/.config/ranger/rc.conf
+echo "set preview_images_method w3m" >> ~/.config/ranger/rc.conf
 
 ## Install Zellij from Cargo
 # Cargo
