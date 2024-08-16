@@ -79,11 +79,9 @@ sudo mv gdu_linux_amd64 /usr/bin/gdu
 # Nerd Fonts
 curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash  
 
-# Astrovim
-#git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
-
-# Astrovim Custom
-git clone https://github.com/kabinspace/AstroNvim_user ~/.config/nvim
+# LazyVim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 nvim --headless +q
 
 rm -rf ~/.config/nvim/.git
@@ -143,8 +141,7 @@ cd
 # Configure ZSH
 sudo apt install git wget curl ruby zsh -y
 chsh -s $(which zsh)
-curl -fsSL https://raw.githubusercontent.com/JGroxz/presto-prezto/main/presto-prezto.sh | bash -s -- --font
-p10k configure
+curl -fsSL https://raw.githubusercontent.com/Aiacos/presto-prezto/main/presto-prezto.sh | bash -s -- --font
 
 tee -a ~/.zellij_base_layout.kdl << EOF
 layout {
