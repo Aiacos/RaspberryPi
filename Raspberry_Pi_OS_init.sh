@@ -32,6 +32,7 @@ sudo apt install ranger -y
 sudo apt install sxiv -y
 sudo apt install chafa -y
 sudo apt install neovim -y
+sudo apt install ncdu -y
 
 touch ~/.config/ranger/rc.conf
 echo "set preview_images true" >> ~/.config/ranger/rc.conf
