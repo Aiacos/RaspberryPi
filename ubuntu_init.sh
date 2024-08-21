@@ -36,6 +36,7 @@ sudo apt install tmux -y
 sudo apt install ranger -y
 sudo apt install sxiv -y
 sudo apt install chafa -y
+sudo apt install ncdu -y
 sudo apt install gnome-tweaks -y
 sudo apt install gnome-shell-extension-manager -y
 
