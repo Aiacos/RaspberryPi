@@ -35,7 +35,7 @@ sudo apt install neovim -y
 sudo apt install ncdu -y
 
 sudo apt install caca-utils highlight atool w3m poppler-utils mediainfo -y
-ranger Q
+ranger --cmd=quit!
 ranger --copy-config=all
 
 ## Install Zellij from Cargo
