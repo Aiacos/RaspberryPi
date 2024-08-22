@@ -40,9 +40,9 @@ sudo apt install ncdu -y
 sudo apt install gnome-tweaks -y
 sudo apt install gnome-shell-extension-manager -y
 
-touch ~/.config/ranger/rc.conf
-echo "set preview_images true" >> ~/.config/ranger/rc.conf
-echo "set preview_images_method ueberzug" >> ~/.config/ranger/rc.conf
+sudo apt install caca-utils highlight atool w3m poppler-utils mediainfo -y
+ranger Q
+ranger --copy-config=all
 
 # Speedtest
 sudo apt-get install curl
