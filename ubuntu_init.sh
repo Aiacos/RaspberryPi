@@ -41,7 +41,7 @@ sudo apt install gnome-tweaks -y
 sudo apt install gnome-shell-extension-manager -y
 
 sudo apt install caca-utils highlight atool w3m poppler-utils mediainfo -y
-ranger Q
+ranger --cmd=quit!
 ranger --copy-config=all
 
 # Speedtest
