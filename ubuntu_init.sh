@@ -67,6 +67,7 @@ brew install zsh-history-substring-search
 brew install atuin
 brew install dust
 brew install jstkdng/programs/ueberzugpp
+brew install yazi
 
 ## Neovim setup
 sudo apt install neovim -y
