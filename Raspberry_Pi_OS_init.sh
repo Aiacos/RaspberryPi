@@ -45,6 +45,11 @@ curl https://sh.rustup.rs -sSf | sh
 # Zellij
 cargo install --locked zellij
 
+# Yazi
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+cargo install --locked yazi-fm yazi-cli
+
 # Speedtest
 sudo apt-get install curl
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
