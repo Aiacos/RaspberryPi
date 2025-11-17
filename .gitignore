@@ -1,2 +1,10 @@
 
 .DS_Store
+
+# File di configurazione con credenziali
+Raspberry_Pi_OS/init.sh
+*.local
+.env
+.env.local
+credentials.json
+secrets.yaml
